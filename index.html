@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Harshika 💗</title>
+    <style>
+        :root {
+            --bg-color: #fce4ec;
+            --env-color: #f06270;
+            --env-dark: #d44d5a;
+            /* Love-themed paper color */
+            --paper-bg: #fff9f0; 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: var(--bg-color);
+            font-family: 'Georgia', serif;
+            overflow: hidden; /* Keeps hearts inside screen */
+        }
+
+        /* Floating Hearts Animation */
+        .heart-particle {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            animation: moveHearts 4s linear infinite;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        @keyframes moveHearts {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: var(--env-dark);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        /* Flap */
+        .envelope-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 14;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-top: 110px solid var(--env-color);
+            transform-origin: top;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Front */
+        .envelope-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            z-index: 13;
+            border-left: 150px solid var(--env-color);
+            border-right: 150px solid var(--env-color);
+            border-bottom: 100px solid var(--env-dark);
+        }
+
+        .envelope-wrapper.open::before {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        /* Letter Styling (Love Paper) */
+        .letter {
+            position: absolute;
+            bottom: 10px;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background: var(--paper-bg);
+            background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
+            background-size: 20px 20px; /* Subtle paper texture */
+            transition: transform 0.8s ease-in-out;
+            z-index: 11;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            border: 1px solid #e0d5c5;
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+            border-radius: 2px;
+        }
+
+        .envelope-wrapper.open .letter {
+            transform: translateY(-130px);
+            z-index: 15;
+            height: 300px;
+        }
+
+        .letter-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .btns {
+            margin-top: 150px;
+            z-index: 20;
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: var(--env-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        #close-btn { background-color: #888; }
+        
+        /* Custom Scrollbar */
+        .letter::-webkit-scrollbar { width: 5px; }
+        .letter::-webkit-scrollbar-thumb { background: var(--env-color); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <audio id="romanticMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+
+    <div class="envelope-wrapper" id="envelope">
+        <div class="letter">
+            <div class="letter-text">
+                <h3 style="color: #d44d5a;">My Dearest Harshika 💗</h3>
+                Heyy, harshika 💗<br>
+                I’m sryy, babyy 🥹<br>
+                Whatever I did was just a mazak mlm 🫠<br>
+                I never meant to make you feel unloved, cutu 🌷<br>
+                I love uhh so much 💖✨ and I’m really, really sryyy 🫶<br><br>
+                You matter to meh more than my ego... nothing over uhh sweetie 🥹🫶<br>
+                more than a laugh 🫠<br>
+                more than anything silly I could ever do ⭐<br>
+                I just wanna be with you 🫶<br>
+                and I promise I’ll never break yo heart 💓<br>
+                becoz yo heart is something very precious to meh 🥹✨<br><br>
+                <strong>You are very precious to meh 🌷</strong><br>
+                Being with you makes me feel chosen by fate ⭐<br>
+                Loving you makes me feel lucky 🍀💗<br>
+                And staying with you feels like something I want for every version of my future ♾️✨<br><br>
+                I’m blessed because I love you 💖<br>
+                And I love you because you are you 🫶<br>
+                Always. ♡ 🥹<br><br>
+                I feel blessed not because life is perfect ✨<br>
+                but because you’re in it 💗<br>
+                Your laugh 🫠, your care 🌷, the way you stay — they all feel like little gifts my heart gets every single day 💓⭐<br><br>
+                So this is just a little apology… 🥹<br>
+                and a lot of love 💖💗<br>
+                Harshika, you mean the world to me 🌍✨<br>
+                I’m afraid of losing you 🥹<br>
+                because my heart wants you forever ♾️💓<br><br>
+                Loving you adds something special to my life 💖<br>
+                something I can’t explain in words 🫶✨<br>
+                If I had one lifetime wish ⭐<br>
+                it would be to love you in every lifetime ♾️💗<br><br>
+                You came into my life quietly 🌷<br>
+                but you became the loudest beat in my heart 💓🥹<br>
+                I’ll never leave you 🫶<br>
+                and you’ll never feel unloved by meh, baby 💗<br><br>
+                My LOML 💖<br>
+                ILYSM, HARSHI 😭🫶✨
+            </div>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button id="open-btn">OPEN</button>
+        <button id="close-btn">CLOSE</button>
+    </div>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const music = document.getElementById('romanticMusic');
+
+        // Function to create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-particle');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+
+        // Start hearts every 300ms
+        setInterval(createHeart, 300);
+
+        openBtn.addEventListener('click', () => {
+            envelope.classList.add('open');
+            music.play(); // Starts music on click
+        });
+
+        closeBtn.addEventListener('click', () => {
+            envelope.classList.remove('open');
+            music.pause(); // Optional: pauses music when closed
+        });
+    </script>
+</body>
+</html>
